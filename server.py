@@ -15,6 +15,10 @@ def register_device():
 def get_devices():
     return jsonify(connected_devices)
 
+@app.route("/")
+def home():
+    return "🌍 Flask Server is Live!"
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5050)
 
